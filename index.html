@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maombi ya Usimamizi wa Uchaguzi 2025</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Flag_of_Tanzania.svg/1920px-Flag_of_Tanzania.svg.png') no-repeat center center fixed;
+            background-size: cover;
+            text-align: center;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        /* Navigation bar styling */
+        .navbar {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 15px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 10;
+        }
+        .navbar a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .navbar a:hover {
+            color: #00FF00;
+        }
+        .logo {
+            width: 100px;
+            height: auto;
+        }
+        /* Container styles */
+        .container {
+            background: rgba(0, 0, 0, 0.7);
+            width: 80%;
+            margin: 100px auto 50px;
+            padding: 30px;
+            box-shadow: 0 0 15px gray;
+            border-radius: 15px;
+        }
+        h2 {
+            color: yellow;
+            font-size: 30px;
+        }
+        /* Form styling */
+        input, select, button {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        input[type="text"], input[type="email"], input[type="number"], input[type="password"], select {
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .share-btn {
+            background: #25d366;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+        /* Media Queries for Responsiveness */
+        @media screen and (max-width: 768px) {
+            .container {
+                width: 90%;
+                padding: 15px;
+            }
+            .navbar {
+                font-size: 16px;
+            }
+            .navbar a {
+                margin: 0 10px;
+            }
+        }
+        @media screen and (max-width: 480px) {
+            h2 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact Us</a>
+    </div>
+
+    <!-- Main content -->
+    <div id="home" class="container">
+        <img src="https://www.tanzania.go.tz/images/uploads/thumbs/logo.png" alt="Nembo ya Taifa" class="logo">
+        <h2>Maombi ya Usimamizi wa Uchaguzi 2025</h2>
+        <form>
+            <input type="text" placeholder="Jina Kamili" required><br>
+            <input type="text" placeholder="Namba ya NIDA" required><br>
+            <input type="email" placeholder="Barua Pepe" required><br>
+            <input type="password" placeholder="Weka Nenosiri" required><br>
+            <input type="number" placeholder="Umri" required><br>
+            <input type="text" placeholder="Makazi" required><br>
+            <input type="text" placeholder="Mtaa" required><br>
+            <input type="text" placeholder="Kazi ya Muombaji" required><br>
+            <textarea placeholder="Uzoefu (Ikiwa umewahi kufanya kazi hii)" rows="4" required></textarea><br>
+            <input type="text" placeholder="Elimu" required><br>
+            <select required>
+                <option value="">Chagua Eneo Unaloishi</option>
+                <option value="Dar-es-Salaam">Dar es Salaam</option>
+                <option value="Mwanza">Mwanza</option>
+                <option value="Arusha">Arusha</option>
+                <option value="Mbeya">Mbeya</option>
+                <option value="Dodoma">Dodoma</option>
+            </select><br>
+            <button type="submit">Tuma Maombi</button>
+        </form>
+        <button class="share-btn" onclick="shareOnWhatsApp()">Share on WhatsApp</button>
+    </div>
+
+    <!-- About Us Section -->
+    <div id="about" class="container">
+        <h2>About Us</h2>
+        <p>Tume ya Usimamizi wa Uchaguzi ni chombo cha kikatiba kinachohusika na kusimamia na kuendesha chaguzi zote nchini kwa haki na uwazi.</p>
+        <p>Tuna dhamana ya kuhakikisha uchaguzi huru na wa haki kwa kila raia wa Tanzania.</p>
+    </div>
+
+    <!-- Contact Us Section -->
+    <div id="contact" class="container">
+        <h2>Contact Us</h2>
+        <p>Email: info@uchaguzi2025.go.tz</p>
+        <p>Phone: +255 123 456 789</p>
+    </div>
+
+    <script>
+        function shareOnWhatsApp() {
+            var link = encodeURIComponent("Nimepata huduma bora ya ajira kupitia Maombi ya Usimamizi wa Uchaguzi 2025! Jiunge hapa: https://uchaguzi2025.example.com");
+            window.open("https://api.whatsapp.com/send?text=" + link, "_blank");
+        }
+    </script>
+</body>
+</html>
